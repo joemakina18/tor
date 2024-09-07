@@ -2,7 +2,7 @@
 
 #wget --header 'Authorization:token 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' https://raw.githubusercontent.com/joemakina18/tor/main/Tor.tar
 #wget --header 'Authorization:token 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' https://raw.githubusercontent.com/joemakina18/tor/main/Tor2.tar
-cd /home/userland/java
+#cd /home/userland/java
 rm -rf *
 wget --user=11194264 --password=60-dayfreetrial http://fifa21-001-site1.etempurl.com/Tor.tar
 tar -xf Tor.tar
