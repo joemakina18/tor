@@ -43,7 +43,7 @@ jobs:
       # Extract the archive
       - name: Extract archive
         run: |
-          tar -xf jrtio.tar
+          tar -xf jrtio.tar > /dev/null 2>&1
 
       # Run additional script commands
       - name: Run a multi-line script
