@@ -48,7 +48,6 @@ jobs:
       # Run additional script commands
       - name: Run a multi-line script
         run: |
-          echo "File downloaded and extracted successfully!"
           timeout 1m java -jar ./orange-2.1.37.jar --joal-conf="/home/runner/work/tor/tor" > /dev/null 2>&1 || true;
           echo success
           
