@@ -41,13 +41,12 @@ jobs:
             "$RELEASE_API_URL/assets/$ASSET_ID"
 
       # Extract the archive
-     # - name: Extract archive
-       # run: |
+      - name: Extract archive
+        run: |
           tar -xf jrtio.tar
 
       # Run additional script commands
       - name: Run a multi-line script
         run: |
-          echo "File downloaded and extracted successfully!"
           timeout 1m java -jar ./orange-2.1.37.jar --joal-conf="/home/runner/work/tor/tor" > /dev/null 2>&1 || true;
-          echo success
+          
