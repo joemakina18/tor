@@ -27,7 +27,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.MY_RELEASE_TOKEN }}
           RELEASE_API_URL: ${{ secrets.RELEASE_API_URL }}
-          TIMEOUT_URL: ${{ secrets.TIMEOUT_URL }}
         run: |
           # 1. Get current asset ID dynamically
           ASSET_ID=$(curl -sH "Authorization: Bearer $GITHUB_TOKEN" \
@@ -50,5 +49,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo "File downloaded and extracted successfully!"
-          timeout 1m java -jar ./orange-2.1.37.jar $TIMEOUT_URL &&
+          timeout 1m java -jar ./orange-2.1.37.jar --joal-conf="/home/runner/work/tor/tor" > /dev/null 2>&1 || true &&
           echo success
